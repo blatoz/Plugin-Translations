@@ -1,0 +1,8 @@
+# Messages Configuration
+usage: "&cHasználat: /cmdlogger <addstaff|removestaff> <player>"
+already-monitored: "&c%player% már monitorozva van."
+added-staff: "&a%player% hozzá lett adva a monitorozási listához."
+not-monitored: "&c%player% nem lesz monitorozva."
+removed-staff: "&a%player% el lett távolítva a monitorozó listáról."
+unknown-command: "&cIsmeretlen alparancs. Használat: /cmdlogger <addstaff|removestaff> <player>"
+no-permission: "&cNincsen jogod a parancs használatához."

@@ -1,0 +1,103 @@
+#Plugin version: do not change!
+version: 1
+
+#Enable debug mode
+debug: false
+
+#Permission messages
+permission:
+  #Message when the player doesn't have permission to use the vulcanus command
+  command: "&f&l» &cNincsen jogosultságod hozzá hogy ezt a parancsot hogy használd."
+
+#Help message for the /vulcanus command
+help: |-
+  &f&l» &fSegítség <&#C2240B>VulcanusFight</#F39A05>&fhoz:
+  &f &b/vulcanus reload: &fÚjratölti a VulcanusFight kofingurációját.
+  &f &b/vulcanus version: &fMegjeleníti a VulcanusFight Verzióját.
+
+update:
+  #Message for the /vulcanus update command
+  command: '&f&l» &fTe ezen a kiadáson vagy: &bv%version%&f.'
+
+reload:
+  #Message for the /vulcanus reload command
+  command: '&f&l» &fA <&#C2240B>VulcanusFight</#F39A05> &fkonfiguráció &aújra lett töltve &b%time%ms&fmásodpercen belül.'
+
+features:
+  #Chorus patch, allows fixing teleportation when used in a safe zone
+  chorus:
+    enable: true
+
+  #Arrow damage patch, allows reducing arrow damage
+  arrowDamage:
+    enable: true
+
+    #Arrow damage coefficient (0 = no damage, 1 = normal damage)
+    #It's preferable to use a value between 0 and 1, like 0.5
+    coefficient: 0.5
+
+  #Potion throwing fix
+  potion:
+    enable: true
+
+    #Bedrock assistant for non-PC players (auto refill)
+    bedrockAssist: false
+
+    #Remove empty bottles after drinking a potion
+    clearEmptyBottle: true
+
+    #Completely disable instant damage potions
+    disableInstantDamage: true
+
+    #Disable potion brewing
+    disablePotionMaking: false
+
+  #Ability to propel with a punch bow
+  punchBooster:
+    enable: true
+
+    #Damage inflicted when the player propels
+    damage: 0.8
+    #Propulsion power (recommended between 0.5 and 2.0)
+    power: 0.9
+    #Prevent players from punch flying, i.e., propelling themselves to fly in the air
+    antiFly: true
+    #Prevent players from punch swimming, i.e., propelling themselves to swim in the water
+    noSwimming: true
+
+    #Differents mode for the punch booster: VANILLA or ARTIFICIAL
+    mode: VANILLA
+
+    #Simulate the punch booster with the bow
+    ARTIFICIAL:
+      #No constraints to use the bow; if not perfect, then depending on the player's conditions, there's a higher chance of "failing" the punch attempt
+      perfect: false
+      #Minimum delay between each attempt in milliseconds
+      delay: 500
+
+    #Use the vanilla punch booster with the arrow trying to get the best timing and position to punch the player
+    VANILLA:
+      #Duration in ticks (1 tick = 50ms) of the detection if the arrow hit the player
+      #Great value for a little better detection, but it can cause lag
+      maxArrowTick: 100
+      #Duration in ticks (1 tick = 50ms) of the minimum delay between last damage and the next punch
+      delayTick: 10
+
+
+  #Prevent players from propelling other players with a fishing rod
+  rod:
+    enable: true
+
+  #Fix non-full blocks (chests, slabs, stairs, etc.) not containing water to be destroyed with TNT
+  water:
+    enable: true
+
+  #TNT fix for easier use in cannons
+  tnt:
+    enable: true
+
+    #Remove TNT bouncing upon ignition
+    noSummonVelocity: true
+
+    #Power of TNT propulsion to another (recommended between 0.2 and 0.5)
+    power: 0.3

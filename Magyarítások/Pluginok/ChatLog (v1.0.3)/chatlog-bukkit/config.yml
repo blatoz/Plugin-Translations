@@ -1,0 +1,10 @@
+prefix: '&8[&2ChatLog&8] &r'
+configReloaded: '&7Konfiguráció újratöltve'
+noPermission: '&cNincsen jogod!'
+invalidPlayer: '&cJátékos nem található'
+notANumber: '&cÉrvénytelen limit érték'
+help: '&cÉrvénytelen használat! &7Használat: &f/chatlog <player | reload> [limit]'
+playerHasNoMessages: '&cA játékos nem küldött üzenetet!'
+
+printHeader: '&fÜzenet rekord &a%player% nak/nek &7[limit=%limit%]:'
+printValue: ' &7- &f%message%'

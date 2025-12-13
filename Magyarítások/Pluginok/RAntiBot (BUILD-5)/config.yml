@@ -1,0 +1,29 @@
+# Plugin RAntiBot version BUILD-03 config
+# Author: zEnderX5_ , Rafael Auler
+# Subscribe to my channel: http://bit.ly/2kC345B
+# Here you can customize the messages and some things
+# Enjoy the plugin and dont forget to rate a 5 star review =)
+
+# Time in minutes that the antibot data will be reset
+# Every x minutes the antibot removes all player data and all players that dont have
+# The permission rantibot.bypass will be asked to complete the antibot task again
+# Default: 120 minutes (2 hours)
+
+Interval: 120
+
+# Message that appear when player try join the server first time
+MessageKick: '&e&l[AntiBot] &cA hálózatod sikeresen hítelesítve. &aKérlek lépj be újra.'
+
+# When player join the server he must sneak in 15 seconds or he will be kicked
+KickedBecauseNotSneak: '&e&l[AntiBot] &cKi lettél rúgva ezért: Nem lopakodtál a megadott időben.
+  &bLépj be úrja és csináld meg újra.'
+
+MessageRememberToSneak: '&e&l[AntiBot] &cLopakodnod kell vagy ki leszel rúgva
+  15 másodpercen belül.'
+
+# Enable sending your server address to bStats? This could get you a couple more players. =)
+# Defaults to true
+SendIPAddressData: true
+
+# Message that appear when player join the server and dont have moved yet
+MustSneakToTalk: '&e&l[AntiBot] &cYou must sneak in order to chat (Press Shift)'

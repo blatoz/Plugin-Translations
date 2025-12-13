@@ -1,0 +1,30 @@
+#--------------------------------------------------------------------
+#
+#                          Staff Chat Plus
+#
+#                           By NegativeKB
+#
+#        Thanks for downloading the plugin! If you like the plugin,
+#              consider giving it a review on the spigot page!
+#
+#--------------------------------------------------------------------
+
+messages:
+  # Messages you get when you enable/disable Staff Chat
+  staffchat-disabled: '&cStaff Chat le lett tiltva.'
+  staffchat-enabled: '&aStaff Chat engedélyezve lett.'
+  
+  # Hush Mode
+  # Hush is essentialls the staff chat visibility. When hush mode is enabled, 
+  # you cannot see messages from staff chat. You are still able to send messages.
+  hushmode-disabled: '&cHush mód le lett tiltva.'
+  hushmode-enabled: '&aHush mód engedélyezve lett.'
+  
+  # Staff Chat is color code supported!
+  staffchat-message: '&8[&4Staff Chat&8] &c%player%: &7%message%' # Staff Chat message
+  
+  reload-message: '&eKonfiguráció újratöltve.'
+  
+settings:
+  permission: 'StaffChat.use' # Permission to use plugin features
+  shortcut: 'none' # Shortcut for chatting in staff chat instead of doing the command, 'none' to disable shortcut

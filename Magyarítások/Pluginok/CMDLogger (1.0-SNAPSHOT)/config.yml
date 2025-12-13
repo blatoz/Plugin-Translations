@@ -1,0 +1,11 @@
+# CMDLogger Configuration
+
+# The folder where staff logs will be stored.
+staff-folder: "staffer"
+
+# The date format for the logs.
+date-format: "yyyy-MM-dd HH:mm:ss"
+
+# Log retention in days. Set to -1 or 0 to disable.
+log-retention-days: 30
+

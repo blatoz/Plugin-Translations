@@ -1,0 +1,53 @@
+# Welcome to my Ultra Moderation Plugin
+# Thanks for dowload my plugin and enjoy
+# Give me 5 stores and idea to update
+#
+
+messages:
+  noperms: "&4Nincsen jogosultságod!"
+  moddisable: "&cNem vagy már többé UltraModeration módban"
+  modenable:  "&aMosr már UltraModeration módban"
+  noplayertoteleport: "&cNincsen játékos akihez lehetne teleportálni."
+  teleportto: "&aTeleportálva &e<PLAYER> &a játékoshoz"
+  vanish: "&aMost már Vansihben vagy!"
+  unvanish: "&cMost már nem vagy Vanishben!"
+
+  freeze:
+    freezerepeat: "&aLe vagy fagyaztva, kérlek csatlakoz a discord szerverünkhöz: https://discord.gg/Vanity vagy meghívó kód !"
+    freezeby: "&aLe vagy fagyaztva &e<PLAYER> &aáltal."
+    unfreezeby: "&aA fagyaztásodat le vette &e <PLAYER>"
+    havefreeze: "&cLe lettél fagyaztva &e<PLAYER>"
+    haveunfreeze: "&cA fagyaztásodat le vették. &e<PLAYER>"
+
+
+
+
+
+items:
+  seeinv:
+    message: "&6Leltár megtekintése"
+    slots: 0
+    items: BOOK
+  freeze:
+    message: "&6Fagyaztás"
+    slots: 1
+    items: PACKED_ICE
+  randomtp:
+    message: "&6Teleportálás Random"
+    slots: 2
+    items: COMPASS
+  knockback:
+    message: "&6Hátralökés"
+    kblevel: 5
+    slots: 3
+    items: STICK
+  vanish:
+    message: "&6Vanish"
+    slots: 4
+    items: EMERALD
+  kill:
+    message: "&6Megölés"
+    slots: 5
+    items: BLAZE_ROD
+
+

@@ -1,0 +1,10 @@
+API_KEY: "" # IPhub API KEY kell ide. 
+KickMessage: "VPN-nek nem engedélyezetek itt."
+CommandPermission: "McAntiVPN.command"
+PermissionNotify: "McAntiVPN.notify"
+DontHavePermissionMessage: "&4Bocsi de nincsen jogosultságod ehhez."
+
+# PLEASE USE THE %ip and %username AND DON'T CHANGE IT I WILL NOT BE RESPONSIBLE IF IT DOESN'T WORK
+# %ip = ip of the player who tried to connect
+# %username = username of the player who tried to connect
+PlayerWithVPNTriedToConnect: "A játékos %username ezzel az IP címmel: %ip probált csatlakozni de blokkolta a AntiVPN."

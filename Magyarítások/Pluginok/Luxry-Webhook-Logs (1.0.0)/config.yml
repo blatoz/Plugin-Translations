@@ -1,0 +1,37 @@
+webhook:
+ url: "Webhook URL-led"
+ name: "Luxry Webhook Logok"
+# Discord Embed Konfiguráció
+embed:
+ # Általános Embed Konfiguráció
+ title: "Új Konzol Log!" # Embed címe
+ description: "%log_here%" # leírása
+ color: "#00FF00" # Embed színe HEX formátumban (pl., #00FF00 zöldhöz)
+
+ # Author Section
+ author:
+  enabled: true # Toggle author section on/off
+  name: "Szervered Neve" # Author's name
+  icon_url: "https://luxry.club/uploads/1730207085508.png" # URL to the author's icon
+  url: "https://luxry.club" # URL linked to the author's name
+
+ # Footer Section
+ footer:
+  enabled: true # Toggle footer section on/off
+  text: "Szervered Neve | Konzol Log" # Footer text
+  icon_url: "https://luxry.club/uploads/1730207085508.png" # URL to the footer icon
+
+ # Thumbnail
+ thumbnail:
+  enabled: true # Toggle thumbnail on/off
+  url: "https://luxry.club/uploads/1730207085508.png" # URL to the thumbnail image
+
+ # Image
+ image:
+  enabled: true # Toggle image on/off
+  url: "https://luxry.club/uploads/1730207085508.png" # URL to the main image
+
+ # Timestamp
+ timestamp:
+  enabled: true # Toggle timestamp on/off
+  use_current_time: true # Use the current time for the timestamp (true/false)
