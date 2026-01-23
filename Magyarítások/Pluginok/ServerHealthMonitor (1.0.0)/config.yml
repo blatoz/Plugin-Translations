@@ -1,0 +1,60 @@
+monitoring:
+  sample-interval-ticks: 20 # a mutatók mintavételi gyakorisága (ticks)
+  history-length-minutes: 30
+
+historySizes:
+  tps: 600
+  mspt: 600
+  ram: 720
+  cpu: 720
+  counts: 720
+  spikes: 1000
+
+thresholds:
+  tps:
+    warning: 18.0
+    critical: 15.0
+  mspt:
+    warning: 40.0
+    critical: 50.0
+  ram-usage-percent:
+    warning: 80
+    critical: 90
+  cpu-usage-percent:
+    warning: 80
+    critical: 90
+
+alerts:
+  # Az értesítések értékelésének szabályozása. Opciók:
+  # - any: értesítés, ha a TPS a küszöbérték alatt van, VAGY az MSPT a kritikus érték felett van
+  # - tps: értesítés csak akkor, ha a TPS a küszöbérték alatt van
+  # - mspt: értesítés csak akkor, ha az MSPT a kritikus érték felett van
+  # - both: értesítés csak akkor, ha a TPS a küszöbérték alatt van, ÉS az MSPT a kritikus érték felett van
+  mode: any
+  # Ha be van állítva, akkor ez a TPS küszöbérték lesz használva a riasztásokhoz; ellenkező esetben a thresholds.tps.warning érték lesz használva.
+  tps-alert-threshold: 18.0
+  # A spam elkerülése érdekében a csúcsriasztások közötti várakozási idő (másodpercben)
+  spike-cooldown-seconds: 5
+  # A riasztási feltételnek megfelelő egymást követő minták száma a riasztás kiváltása előtt
+  consecutive-samples: 1
+
+discord:
+  enabled: false
+  bot-token: ""
+  log-channel-id: ""
+  alert-lag-spikes: true
+  alert-interval-seconds: 300
+
+messages:
+  prefix: "&7[&aServerHealth&7] "
+  summary:
+    - "&aTPS: &f{tps} &7| &aMSPT: &f{mspt}"
+    - "&aRAM: &f{used_ram}/{max_ram} MB &7(&f{ram_percent}%&7)"
+    - "&aCPU: &f{cpu_percent}%"
+    - "&aJátékosok: &f{players} &7| &aEntitások: &f{entities} &7| &aChunkok: &f{chunks}"
+  no-permission: "&cNincsen jogosultságod ehhez a parancshoz."
+  reloaded: "&aServerHealth konfig újratöltve."
+
+logging:
+  log-lag-spikes: true
+  log-dashboard-access: true
