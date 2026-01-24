@@ -1,0 +1,80 @@
+# DOCUMENTATION: https://docs.artillex-studios.com/axauctions.html
+
+# These are all the options that you can use in the webhook section: (most of them are optional, you can remove them)
+#    # the message before the embed, you can put a ping here in the <@&1234567890123456789> format
+#    content: "<@&1234567890123456789>"
+#    # color in hex
+#    color: "#FF6600"
+#    description: "Your description"
+#    title:
+#      # required
+#      text: "Title!"
+#      icon: ""
+#    author:
+#      # required
+#      name: "Author name"
+#      icon-url: ""
+#      url: ""
+#    footer:
+#      # required
+#      text: "Footer"
+#      icon: ""
+#    image-url: ""
+#    thumbnail-url: ""
+#    fields:
+#      1:
+#        # required
+#        inline: false
+#        # required
+#        name: "Field1"
+#        # required
+#        value: "Value1"
+
+# REQUIRED
+url: ""
+
+auction-start:
+  enabled: true
+  color: "#00DDFF"
+  title:
+    text: "Új Aukció"
+  fields:
+    "1":
+      inline: false
+      name: Eladó
+      value: "%player%"
+    "2":
+      inline: false
+      name: Tárgy
+      value: "%amount%x %item%"
+    "3":
+      inline: false
+      name: Ár
+      value: "%price%"
+
+auction-buy:
+  enabled: true
+  color: "#00DDFF"
+  title:
+    text: "Tárgy Megvásárolva"
+  fields:
+    "1":
+      inline: true
+      name: Vásárló
+      value: "%player%"
+    "2":
+      inline: true
+      name: Eladó
+      value: "%seller%"
+    "3":
+      inline: false
+      name: Tárgy
+      value: "%amount%x %item%"
+    "4":
+      inline: true
+      name: Ár
+      value: "%price%"
+
+# do not change this
+version: 1
+#eyJ1c2VyLW5hbWUiOiJEdXJhYmlsaXR5IiwidXNlci1pZCI6IjI0ODYiLCJkYXRlIjoiMjAyNC0wNy0xOCAxNDozNCIsInNpdGUiOiJodHRwczovL2dsZWFrcy5wcm8iLH0=

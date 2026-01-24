@@ -1,0 +1,188 @@
+# DOKUMENTÁCIÓ: https://docs.artillex-studios.com/axauctions.html
+
+# Saját valutákat hozhatsz létre helyettesítő szimbólumok (placeholder) használatával
+# Ügyelj arra, hogy egyik helyettesítő szimbólumon se legyen formázás
+# PlaceholderAPI szükséges
+placeholder-currencies:
+  Example-Currency:
+    register: false
+    # Ha a valuta egész számokat használ, kapcsold ki ezt
+    # 100.5 - true
+    # 100 - false
+    uses-double: true
+    # Ha a helyettesítő szimbólum offline játékosoknál is kiértékelhető, kapcsold be
+    works-offline: false
+    tax: 0
+    settings:
+      raw-placeholder: "%vault_eco_balance_fixed%"
+      give-command: "eco give %player% %amount%"
+      take-command: "eco take %player% %amount%"
+    display:
+      raw: "Pénz"
+      gui: "&f%price% &#AAFFFFpénz"
+      item:
+        material: EMERALD
+        name: "&#00DDFFPénz"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+
+# Beépített valuták
+currencies:
+  Experience:
+    register: false
+    # Százalékban, 0-ra állítsd a kikapcsoláshoz
+    # Például állítsd 0.9-re 10% adóhoz
+    tax: 0
+    display:
+      raw: "Tapasztalat"
+      gui: "&f%price% &#AAFFFFtapasztalat"
+      item:
+        material: EXPERIENCE_BOTTLE
+        name: "&#00DDFFTapasztalat"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  Vault:
+    register: true
+    tax: 0
+    display:
+      # A valuta megjelenési módja az aukciós felület leírásaiban
+      gui: "&f%price% &#AAFFFFcoin"
+      # A valuta váltóban és a tab kiegészítésben használatos
+      raw: "Vault"
+      # A valuta választóban megjelenített tárgy
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFVault"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  PlayerPoints:
+    register: true
+    tax: 0
+    display:
+      raw: "PlayerPoints"
+      gui: "&f%price% &#AAFFFFpont"
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFPlayerPoints"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  RoyaleEconomy:
+    register: true
+    tax: 0
+    display:
+      raw: "RoyaleEconomy"
+      gui: "&f%price% &#AAFFFFcoin"
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFRoyaleEconomy"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  CoinsEngine:
+    register: true
+    tax: 0
+    # A használni kívánt valuta neve
+    currency-name: "coins"
+    display:
+      raw: "CoinsEngine"
+      gui: "&f%price% &#AAFFFFcoin"
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFCoinsEngine"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  UltraEconomy:
+    register: false
+    tax: 0
+    # A használni kívánt valuta neve
+    currency-name: "coins"
+    display:
+      raw: "UltraEconomy"
+      gui: "&f%price% &#AAFFFFcoin"
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFUltraEconomy"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  KingdomsX:
+    register: true
+    tax: 0
+    display:
+      raw: "KingdomsX"
+      gui: "&f%price% &#AAFFFFnexus pont"
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFKingdomsX"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  RivalHarvesterHoes:
+    register: true
+    tax: 0
+    display:
+      raw: "RivalHarvesterHoes"
+      gui: "&f%price% &#AAFFFFesszencia"
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFRivalHarvesterHoes"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  SuperMobCoins:
+    register: true
+    tax: 0
+    display:
+      raw: "SuperMobCoins"
+      gui: "&f%price% &#AAFFFFmobcoin"
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFSuperMobCoins"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  TheOnly-MobCoins:
+    register: true
+    tax: 0
+    display:
+      raw: "TheOnly-MobCoins"
+      gui: "&f%price% &#AAFFFFmobcoin"
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFTheOnly-MobCoins"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  TokenManager:
+    register: true
+    tax: 0
+    display:
+      raw: "TokenManager"
+      gui: "&f%price% &#AAFFFFtoken"
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFTokenManager"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+  AxQuestBoard:
+    register: true
+    tax: 0
+    display:
+      raw: "AxQuestBoard"
+      gui: "&f%price% &#AAFFFFküldetés pont"
+      item:
+        material: GOLD_INGOT
+        name: "&#00DDFFAxQuestBoard"
+        lore:
+          - " "
+          - "&#00DDFF&l(!) &#00DDFFKattints ide a kiválasztáshoz!"
+
+# Ezt ne változtasd meg
+version: 5
+#eyJ1c2VyLW5hbWUiOiJEdXJhYmlsaXR5IiwidXNlci1pZCI6IjI0ODYiLCJkYXRlIjoiMjAyNC0wNy0xOCAxNDozNCIsInNpdGUiOiJodHRwczovL2dsZWFrcy5wcm8iLH0=

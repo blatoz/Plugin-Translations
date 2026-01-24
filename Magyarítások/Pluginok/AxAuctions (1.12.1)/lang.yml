@@ -1,0 +1,124 @@
+# DOKUMENTÁCIÓ: https://docs.artillex-studios.com/axauctions.html
+
+help:
+  - " "
+  - "<gradient:#00BBFF:#00DDFF><b>AxAuctions Segítség</b></gradient> &7»"
+  - " &7- &f/ah &7| &#00DDFFAukciós menü megnyitása"
+  - " &7- &f/ah view &7| &#00DDFFSaját aukcióid megtekintése"
+  - " &7- &f/ah view [játékos] &7| &#00DDFFJátékos aukcióinak megtekintése"
+  - " &7- &f/ah sell <ár> [mennyiség] [valuta] &7| &#00DDFFTárgy eladása"
+  - " &7- &f/ah search [szöveg] &7| &#00DDFFTárgyak keresése típus/név/leírás alapján"
+  - " &7- &f/ah history &7| &#00DDFFEladási és vásárlási előzmények"
+  - " &7- &#00CCFF/ahadmin &7| &#00AAFFAdmin Parancsok"
+  - " "
+
+admin-help:
+  - " "
+  - "<gradient:#00BBFF:#00DDFF><b>AxAuctions Admin Segítség</b></gradient> &7»"
+  - " &7- &f/ahadmin reload &7| &#00DDFFPlugin újratöltése"
+  - " &7- &f/ahadmin history [játékos] &7| &#00DDFFElőzmény felület megnyitása"
+  - " &7- &f/ahadmin limit give/set/take/reset <játékos> <mennyiség> &7| &#00DDFFJátékos limitjének módosítása"
+  - " &7- &f/ahadmin convert <plugin> &7| &#00DDFFMásik pluginról konvertálás"
+  - " "
+
+reload:
+  success: "&#33FF33A plugin sikeresen újratöltve!"
+  failed: "&#FF3333A plugin újratöltése sikertelen! Hiba található a &f%file%&#FF3333 fájlban, nézd meg a konzolt vagy javítsd a hibákat!"
+
+item-lore:
+  - "%lore%"
+  - " "
+  - "&#999999&m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+  - " &#999999» &#00DDFFÁr: &#AAFFFF%price%"
+  - " &#999999» &#00DDFFEladó: &#AAFFFF%seller%"
+  - " &#999999» &#00DDFFLefog: &#AAFFFF%expires%"
+  - "&#999999&m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+  - "&#00DDFF&lKattintás &#DDDDDD» &#AAFFFFTárgy megvásárlása"
+
+item-lore-own:
+  - "%lore%"
+  - " "
+  - "&#999999&m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+  - " &#999999» &#00DDFFÁr: &#AAFFFF%price%"
+  - " &#999999» &#00DDFFLefog: &#AAFFFF%expires%"
+  - "&#999999&m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+  - "&#00DDFF&lKattintás &#DDDDDD» &#AAFFFFAukció törlése"
+
+item-lore-staff:
+  - "%lore%"
+  - " "
+  - "&#999999&m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+  - " &#999999» &#00DDFFÁr: &#AAFFFF%price%"
+  - " &#999999» &#00DDFFEladó: &#AAFFFF%seller%"
+  - " &#999999» &#00DDFFLefog: &#AAFFFF%expires%"
+  - "&#999999&m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+  - "&#00DDFF&lKattintás &#DDDDDD» &#AAFFFFTárgy megvásárlása"
+  - "&#00DDFF&lShift Kattintás &#DDDDDD» &#AAFFFFTörlő menü megnyitása"
+
+history-item-lore:
+  - "%lore%"
+  - " "
+  - "&#999999&m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+  - " &#999999» &#00DDFFEladó: &#AAFFFF%seller%"
+  - " &#999999» &#00DDFFVevő: &#AAFFFF%buyer%"
+  - " &#999999» &#00DDFFÁr: &#AAFFFF%price%"
+  - " &#999999» &#00DDFFEladás ideje: &#AAFFFF%time%"
+  - "&#999999&m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+
+sell:
+  limit-reached: "&#FF0000Elérted az aukciós limitet! &7(%current%/%limit%)"
+  no-item: "&#FF0000Tartson valamit a kezében az eladáshoz!"
+  price-too-low: "&#FF0000A megadott ár alacsonyabb a minimum &f%amount%&#FF0000 értéknél!"
+  price-too-high: "&#FF0000A megadott ár magasabb a maximum &f%amount%&#FF0000 értéknél!"
+  invalid-price: "&#FF0000A megadott ár nem érvényes szám!"
+  success: "&#33FF33Sikeresen felraktál &f%amount% &#33FF33tárgyat az aukciósházra &f%price%&#33FF33-ért!"
+  # Tiltsd le: ""
+  # Minden játékos számára látható
+  action-bar-broadcast: "&#00DDFF%player% &feladni kezdett &#00DDFF%amount% &fdarab &#00DDFF%item% &ftárgyat &#00DDFF%price%&f-ért! &#DDDDDD/ah"
+  chat-broadcast: ""
+
+buy:
+  not-enough-money: "&#FF0000Nem engedheted meg magadnak ezt a tárgyat!"
+  item-not-found: "&#FF0000A tárgy nem található! Valaki már megvette, vagy az eladó visszavonta!"
+  inventory-full: "&#FF0000A táskád tele van!"
+  success: "&#33FF33Sikeresen megvásároltad az &f%amount%x %item% &#33FF33tárgyat az aukciósházról &f%price%&#33FF33-ért!"
+  notify-seller: "&#00DDFF%player% &fmegvásárolta a te &#00DDFF%amount%x &#00DDFF%item% &ftárgyadat &#00DDFF%price% &fért az aukciósházból!"
+  # Tiltsd le: ""
+  # Minden játékos számára látható
+  action-bar-purchase: "&#00DDFF%player% &fmegvette a(z) &#00DDFF%amount% &fdb &#00DDFF%item% &ftárgyat &#00DDFF%seller%&ftől &#00DDFF%price%&f-ért! &#DDDDDD/ah"
+  chat-purchase: ""
+
+admin-action:
+  cancelled: "&#00DDFF%staff% &ftörölte a(z) &#00DDFF%amount%x &#00DDFF%item% &ftárgyadat az aukciósházból &#00DDFF%date%&f-kor!"
+  removed: "&#00DDFF%staff% &feltávolította a(z) &#00DDFF%amount%x &#00DDFF%item% &ftárgyadat az aukciósházból &#00DDFF%date%&f-kor!"
+  cancelled-info: "&#FF3333Sikeresen törölted a tárgyat az aukciósházból!"
+  removed-info: "&#FF3333Sikeresen eltávolítottad a tárgyat az aukciósházból!"
+
+my-items:
+  removed: "&#FF0000Sikeresen eltávolítottad a tárgyat az aukciósházból!"
+
+limit-changed: "&#33FF33Megváltoztattad &f%player%&#33FF33 limitjét &f%amount%&#33FF33-ra!"
+date-format: "yyyy. MM. dd HH:mm:ss"
+limit-bypass-icon: "∞"
+expired: "Lejárt"
+blacklisted: "&#FF0000Ez a tárgy tiltott!"
+converting: "&#33FF33Konverter indítva, nézd meg a konzolt további információkért!"
+
+commands:
+  invalid-value: "&#FF0000Érvénytelen paraméter: &#BB0000%value%"
+  invalid-command: "&#FF0000Érvénytelen parancs vagy alparancs!"
+  missing-argument: "&#FF0000Hiányzó argumentum! Meg kell adnod: &#BB0000%value%&#FF0000."
+  no-permission: "&#FF0000Nincs jogosultságod ehhez a parancshoz!"
+  out-of-range: "&#FF0000A &#BB0000%number% &#FF0000értéknek &#BB0000%min% &#FF0000és &#BB0000%max%&#FF0000 között kell lennie!"
+  player-only: "&#FF0000Csak játékos használhatja ezt a parancsot!"
+  invalid-player: "&#FF0000A &#BB0000%player% &#FF0000játékos nem található!"
+  invalid-selector: "&#FF0000Ezt a szelektort nem használhatod ebben a parancsban!"
+
+update-notifier: "&#88CCFFÚj verzió érhető el a pluginból! &#DDDDDD(&#FFFFFFjelenlegi: &#FF0000%current% &#DDDDDD| &#FFFFFFlegújabb: &#00FF00%latest%&#DDDDDD)"
+
+data-not-loaded: "&#FF0000Az adataid még nem töltődtek be, kérlek várj egy pillanatot mielőtt újra próbálkozol!"
+data-not-loaded-other: "&#FF0000&#BB0000%player% &#FF0000adatai még nem töltődtek be! Kérlek próbáld újra egy pillanat múlva!"
+
+# ezt ne változtasd meg
+version: 6
+#eyJ1c2VyLW5hbWUiOiJEdXJhYmlsaXR5IiwidXNlci1pZCI6IjI0ODYiLCJkYXRlIjoiMjAyNC0wNy0xOCAxNDozNCIsInNpdGUiOiJodHRwczovL2dsZWFrcy5wcm8iLH0=
