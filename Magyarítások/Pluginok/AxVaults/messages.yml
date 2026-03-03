@@ -11,7 +11,7 @@ guis:
       glow: false
       lore:
       - ' '
-      - ' &7- &fSlots: &#aaffaa%used%&7/&#55ff00%max%'
+      - ' &7- &fSlotok: &#aaffaa%used%&7/&#55ff00%max%'
       - ' '
       - '&#55ff00&l(!) &#55ff00Kattints - Széf megnyitása'
       - '&#55ff00&l(!) &#55ff00Shift + Kattintás - Csere'
