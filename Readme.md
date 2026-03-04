@@ -31,7 +31,7 @@
 | LandClaiming | :white_check_mark: |
 | LiteBans | :white_check_mark: |
 | LibteryBans | :white_check_mark: |
-| Libreforge | :white_check_mark |
+| Libreforge | :white_check_mark: |
 | Luxry-Webhhok-Logs | :white_check_mark: |
 | Maintenance | :white_check_mark: |
 | McAntiVPN | :white_check_mark: |
