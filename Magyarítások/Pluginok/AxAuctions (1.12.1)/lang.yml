@@ -1,4 +1,4 @@
-# DOKUMENTÁCIÓ: https://docs.artillex-studios.com/axauctions.html
+# DOCUMENTATION: https://docs.artillex-studios.com/axauctions.html
 
 help:
   - " "
@@ -119,6 +119,5 @@ update-notifier: "&#88CCFFÚj verzió érhető el a pluginból! &#DDDDDD(&#FFFFF
 data-not-loaded: "&#FF0000Az adataid még nem töltődtek be, kérlek várj egy pillanatot mielőtt újra próbálkozol!"
 data-not-loaded-other: "&#FF0000&#BB0000%player% &#FF0000adatai még nem töltődtek be! Kérlek próbáld újra egy pillanat múlva!"
 
-# ezt ne változtasd meg
+# don't change this
 version: 6
-#eyJ1c2VyLW5hbWUiOiJEdXJhYmlsaXR5IiwidXNlci1pZCI6IjI0ODYiLCJkYXRlIjoiMjAyNC0wNy0xOCAxNDozNCIsInNpdGUiOiJodHRwczovL2dsZWFrcy5wcm8iLH0=
