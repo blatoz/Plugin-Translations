@@ -38,7 +38,7 @@ discounts:
     upcoming: "&6- &f{discount_key}: &f{discount_amount}%ról/ről &e{discount_global}&6{discount_category}&6{discount_package}, &7kezdés: &6{discount_start}"
     permanent: "&6- &f{discount_key}: &f{discount_amount}%ról/ről &e{discount_global}&6{discount_category}&6{discount_package}, végleges"
     expired: "&6- &f{discount_key}: &f{discount_amount}%ról/ről &e{discount_global}&6{discount_category}&6{discount_package}, &4&lLEJÁRT"
-    global-placeholder: ' &8(&fGlobal&8) '
+    global-placeholder: ' &8(&fGlobális&8) '
     category-placeholder: ' &7kategóriában &f '
     package-placeholder: ' &7csomagban &f '
 
