@@ -401,7 +401,7 @@ messages:
   # - {displayname}: The display name of the user who was awarded the advancement.
   # - {advancement}: The name of the advancement.
   # ... PlaceholderAPI placeholders are also supported here too!
-  advancement: ":medal: {displayname} elérte a előrelépést **{advancement}**!"
+  advancement: ":medal: {displayname} elérte a(z) előrelépést **{advancement}**!"
   # This is the message sent to Discord when a player runs the /me or /action command.
   # The following placeholders can be used here:
   # - {username}: The name of the user who ran the command
