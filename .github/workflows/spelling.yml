@@ -1,0 +1,24 @@
+name: Helyesírás ellenőrzés
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  check-spelling:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout kód
+        uses: actions/checkout@v4
+
+      - name: Codespell futtatása
+        uses: codespell-project/actions-codespell@v2
+        with:
+          # Csak a YAML fájlokat nézze
+          path: "**/*.yml **/*.yaml"
+          # Itt adhatsz meg kivételeket, ha valami nem hiba, de annak jelzi
+          ignore_words_list: "ansible,k8s,yaml"
+          # Ne álljon meg az első hibánál, mutassa mindet
+          count: true
