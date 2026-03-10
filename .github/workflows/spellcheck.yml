@@ -1,2 +1,0 @@
-- name: GitHub Spellcheck
-  uses: igsekor/pyspelling-any@v1.0.5
