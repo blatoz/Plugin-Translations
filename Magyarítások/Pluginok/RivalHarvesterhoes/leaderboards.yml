@@ -17,7 +17,7 @@ Leaderboard-Settings:
 Crops:
   main-menu:
     # GUI Name
-    name: '&8Elemental Network » Toplisták'
+    name: '&8Szervernév » Toplisták'
     # GUI Size
     size: 45
     # Filler of the GUI
@@ -152,7 +152,7 @@ Crops:
 # Configuration for the Bamboo Top Leaderboard
 Pitcher:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Kancsóka Top'
+  name: '&8Szervernév » Kancsóka Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -170,7 +170,7 @@ Pitcher:
 # Configuration for the Bamboo Top Leaderboard
 Bamboo:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Bambusz Top'
+  name: '&8Szervernév » Bambusz Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -189,7 +189,7 @@ Bamboo:
 # Configuration for the SugarCane Top Leaderboard
 SugarCane:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Cukornád Top'
+  name: '&8Szervernév » Cukornád Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -207,7 +207,7 @@ SugarCane:
   # Configuration for the Potato Top Leaderboard
 Potato:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Burgonya Top'
+  name: '&8Szervernév » Burgonya Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -224,7 +224,7 @@ Potato:
   # Configuration for the Melon Top Leaderboard
 Melon:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Dinnye Top'
+  name: '&8Szervernév » Dinnye Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -241,7 +241,7 @@ Melon:
   # Configuration for the Pumpkin Top Leaderboard
 Pumpkin:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Tök Top'
+  name: '&8Szervernév » Tök Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -258,7 +258,7 @@ Pumpkin:
   # Configuration for the Wheat Top Leaderboard
 Wheat:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Búza Top'
+  name: '&8Szervernév » Búza Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -275,7 +275,7 @@ Wheat:
   # Configuration for the CocoaBean Top Leaderboard
 CocoaBean:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Kakaóbab Top'
+  name: '&8Szervernév » Kakaóbab Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -292,7 +292,7 @@ CocoaBean:
   # Configuration for the NetherWart Top Leaderboard
 NetherWart:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Nether Wart Top'
+  name: '&8Szervernév » Nether Wart Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -309,7 +309,7 @@ NetherWart:
   # Configuration for the Carrot Top Leaderboard
 Carrot:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Répa Top'
+  name: '&8Szervernév » Répa Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -326,7 +326,7 @@ Carrot:
   # Configuration for the Beetroot Top Leaderboard
 Beetroot:
   hologram-no-player: Nincs játékos
-  name: '&8Elemental Network » Cékla Top'
+  name: '&8Szervernév » Cékla Top'
   display:
     your-rank: '&3&l<!> &b&lRangod: &f&l#{rank} '
     your-lore:
@@ -343,7 +343,7 @@ Beetroot:
 # Configuration for the Essence Top Leaderboard
 Essence:
   hologram-no-player: Nincsen Játékos
-  name: '&8Elemental Network » Essencia Top'
+  name: '&8Szervernév » Essencia Top'
   display:
     your-rank: '&6&l<!> &e&lRangod: &f&l#{rank} '
     your-lore:
@@ -360,7 +360,7 @@ Essence:
 # Configuration for the Crops Top Leaderboard
 Crop:
   hologram-no-player: Nincsen Játékos
-  name: '&8Elemental Network » Termés toplista'
+  name: '&8Szervernév » Termés toplista'
   display:
     your-rank: '&2&l<!> &a&lYour Rank: &f&l#{rank} '
     your-lore:
