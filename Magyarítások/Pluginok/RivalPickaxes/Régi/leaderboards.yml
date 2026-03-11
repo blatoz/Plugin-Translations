@@ -10,7 +10,7 @@
 # Configuration for the Bamboo Top Leaderboard
 Blocks:
   hologram-no-player: Nincsen Játékos
-  name: '&8ElementalNetwork » Blokkok Top'
+  name: '&8Szervernév » Blokkok Top'
   display:
     your-rank: '&5&l[!] &d&Helyezésed: &f&l#{rank} '
     your-lore:
@@ -27,7 +27,7 @@ Blocks:
 # Configuration for the Essence Top Leaderboard
 Essence:
   hologram-no-player: Nincsen Játékos
-  name: '&8ElementalNetwork » Esszencék Top'
+  name: '&8Szervernév » Esszencék Top'
   display:
     your-rank: '&6&l[!] &e&lHelyezésed: &f&l#{rank} '
     your-lore:
