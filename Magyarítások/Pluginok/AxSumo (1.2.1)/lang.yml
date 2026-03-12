@@ -1,0 +1,109 @@
+help-admin:
+- '<gradient:#FFCC00:#FFDD00><b>AxSumo</b><gradient> <gray>» &#FFCCAAHelp:'
+- ' '
+- '  &7⋆ &f/axsumo join <aréna név> &7| &#FFEE00Belépés egy arénába'
+- '  &7⋆ &f/axsumo leave &7| &#FFEE00Kilépés egy arénából'
+- '  &7⋆ &f/axsumo reload &7| &#FFEE00Konfigráció újratöltése'
+- '  &7⋆ &f/axsumo givestarter <aréna> <játékos> [mennyiség] &7| &#FFEE00Suma kezdő adása'
+- '  &7⋆ &f/axsumo create <név> &7| &#FFEE00Sumo aréna létrehozása'
+- '  &7⋆ &f/axsumo editor <aréna> &7| &#FFEE00Sumo szerkesztő megnyitása'
+- '  &7⋆ &f/axsumo setup <opció> <aréna> [más] &7| &#FFEE00Aréna beállítások szerkesztése'
+- '  &7⋆ &f/axsumo delete <aréna> &7| &#FFEE00Sumo aréna törlése'
+- '  &7⋆ &f/axsumo start <aréna> &7| &#FFEE00Sumo aréna elindítása'
+- '  &7⋆ &f/axsumo stop <aréna> &7| &#FFEE00Sumo aréna leállítása'
+- '  &7⋆ &f/axsumo stopall &7| &#FFEE00Összes sumo aréna leállítása'
+- '  &7⋆ &f/axsumo list &7| &#FFEE00Sumo arénák listázása'
+- '  &7⋆ &f/axsumo resetwins <játékos> &7| &#FFEE00Nyerések visszaállítása'
+- ' '
+
+help-user:
+- '<gradient:#FFCC00:#FFDD00><b>AxSumo</b><gradient> <gray>» &#FFCCAAHelp:'
+- ' '
+- '  &7⋆ &f/axsumo join <aréna név> &7| &#FFEE00Belépés egy arénába'
+- '  &7⋆ &f/axsumo leave &7| &#FFEE00Kilépés egy arénából'
+- ' '
+
+time:
+  second: ms
+  minute: p
+  hour: ó
+  day: n
+
+reload:
+  success: '&#33FF33Plugin sikeresen újratöltve!'
+  failed: '&#FF3333Nem sikerült újratölteni a plugint! Valami hiba van a &f%file%&#FF3333 fájlban, nézd meg a konzolt vagy használj yaml validátort a hibák javításához!'
+
+start: '&#00FF00Elindítottad a &f%arena% &#00FF00sumo-t!'
+stop: '&#00FF00Leállítottad a &f%arena% &#00FF00sumo-t!'
+not-running: '&#FF0000A &f%arena% &#FF0000sumo nem aktív!'
+start-random-fail: '&#FF0000Nincs egyetlen indítható aréna sem!'
+
+list: '&#FFFF00Sumo arénák listája: &f%list%'
+
+reset-wins: '&#FF0000Visszaállítottad &f%player%&#FF0000 győzelmeit!'
+
+created: '&#00FF00Létrehoztad a &f%arena%&#00FF00 sumo arénát!'
+deleted: '&#FF0000Törölted a &f%arena%&#FF0000 sumo arénát!'
+does-not-exist: '&#FF0000A sumo aréna nem létezik!'
+already-exists: '&#FF0000A &f%arena% &#FF0000sumo aréna már létezik!'
+not-in-arena: '&#FF0000Nem vagy egyetlen arénában sem!'
+already-in-arena: '&#FF0000Már egy arénában vagy!'
+join: '&#00FF00Csatlakoztál a &f%arena% &#00FF00arénához!'
+leave: '&#FF0000Elhagytad a &f%arena% &#FF0000arénát!'
+commands-disabled: '&#FF0000Az arénában a parancsok le vannak tiltva!'
+already-running: '&#FF0000A %arena% &#FF0000sumo aréna már fut!'
+already-started: '&#FF0000Nem tudsz csatlakozni, mert az aréna már elindult!'
+joined-as-spectator: '&#FF0000Csatlakoztál az arénához, azonban mivel már elindult, néző lettél!'
+inventory-not-empty: '&#FF0000Üres inventory szükséges a sumo arénához való csatlakozáshoz!'
+arena-full: '&#FF0000Nem tudsz csatlakozni, mert az aréna tele van.'
+
+start-failed: '&#FF0000Nem lehet elindítani ezt a sumo-t, mert néhány dolog nincs megfelelően beállítva! Nézd meg a konzolt!'
+setup-set: '&#00FF00Érték sikeresen beállítva!'
+
+placeholders:
+  not-active: '---'
+  not-found: Ismeretlen aréna
+  infinity: ∞
+  state:
+    WAITING: Indul
+    BETWEEN_ROUNDS: Következő kör
+    BEFORE_ROUND: Bemelegítés
+    IN_ROUND: Harc
+    ENDED: Vége
+
+starter:
+  given: '&#00FF00Adtál &f%amount%x %arena% &#00FF00sumo indítót &f%player%&#00FF00-nek!'
+  got: '&#00FF00Kaptál &f%amount%x %arena% &#00FF00sumo indítót!'
+  start: '&#00FF00Elindítottad a %arena% &#00FF00sumo arénát!'
+
+# set to "" to disable
+broadcasts:
+  start: '&#FFEE00A &#FF8800%displayName% &#FFEE00sumo &#FF8800%seconds% másodperc&#FFEE00 múlva kezdődik! &#DDDDDDHasználd a /sumo join %name% parancsot a csatlakozáshoz!'
+  stop: '&#FFEE00A &#FF8800%displayName% &#FFEE00sumo leállt!'
+  not-enough-players: '&#FFEE00A &#FF8800%displayName% &#FFEE00sumo nem indul el, mert nincs elég játékos!'
+  win: '&#FFEE00A &#FF8800%displayName% &#FFEE00sumo esemény győztese: &#FF8800%winner%&#FFEE00!'
+  # these will only be sent to players who are in the arena
+  round-end: '&#FFEE00A &#FF8800%round%. kör &#FFEE00véget ért! A győztes: &#FF8800%player%'
+  round-next: '&#DDDDDDa következő kör %seconds% másodperc múlva kezdődik!'
+  join: '&#FF8800%player% &#FFEE00csatlakozott az arénához! &#DDDDDD(%players%/%maxPlayers%)'
+  leave: '&#FF8800%player% &#FFEE00elhagyta az arénát! &#DDDDDD(%players%/%maxPlayers%)'
+  round-timer: '&#FFEE00A kör &#FF8800%seconds% másodperc&#FFEE00 múlva kezdődik!'
+  round-start: '&#FFEE00A &#FF8800%round%. kör &#FFEE00elkezdődött! &#FF8800%player1% &#FFEE00VS &#FF8800%player2%'
+
+editor:
+  open: '&#FFAA00Megjegyzés: A változtatások alkalmazásához a szerkesztő bezárása után használnod kell az &#FFEE00/axsumo reload &#FFAA00parancsot!'
+
+commands:
+  invalid-value: '&#FF0000Érvénytelen paraméter: &#BB0000%value%'
+  invalid-command: '&#FF0000Érvénytelen parancs vagy alparancs!'
+  missing-argument: '&#FF0000Hiányzó argumentum! Meg kell adnod egy értéket ehhez: &#BB0000%value%&#FF0000.'
+  no-permission: '&#FF0000Nincs jogosultságod ehhez a parancshoz!'
+  out-of-range: '&#FF0000A &#BB0000%number% &#FF0000értéknek &#BB0000%min% &#FF0000és &#BB0000%max%&#FF0000 között kell lennie!'
+  player-only: '&#FF0000Ezt a parancsot csak játékosként használhatod!'
+  invalid-player: '&#FF0000A(z) &#BB0000%player% &#FF0000játékos nem található!'
+  invalid-selector: '&#FF0000Ezt a szelektort nem használhatod ebben a parancsban!'
+
+update-notifier: '&#FFDD88Elérhető a plugin új verziója! &#DDDDDD(&#FFFFFFjelenlegi: &#FF0000%current% &#DDDDDD| &#FFFFFFlegújabb: &#00FF00%latest%&#DDDDDD)'
+
+# do not change
+version: 2
