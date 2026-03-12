@@ -25,7 +25,7 @@ messages:
 
 items:
   seeinv:
-    message: "&6Leltár megtekintése"
+    message: "&6Leltár Megtekintése"
     slots: 0
     items: BOOK
   freeze:
