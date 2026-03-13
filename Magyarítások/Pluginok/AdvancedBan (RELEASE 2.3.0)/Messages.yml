@@ -77,7 +77,7 @@ Tempipban:
   - "&eDc-Ip &8» &c&nhamarosan jön"
   - "&eFórum &8» &c&nhamarosan jön"
   Notification:
-  - "&c&o%NAME% &7bannolva lett &e&o%OPERATOR% által"
+  - "&c&o%NAME% &7ki lett tiltva &e&o%OPERATOR% által."
   - "&7Indok &o%REASON%"
   - "&7&oEzt a játékost eltiltották ennyi időre &e&o%DURATION%"
 
@@ -108,7 +108,7 @@ Tempmute:
 Warn:
   Usage: "&cHasználat &8» &7&o/warn (-s) [Név] [Indok/@Layout]"
   Done: "&c&o%NAME% &7sikeresen figyelmeztettve!"
-  Exempt: "&7Nem tudod figyelmeztettni őt &c&o%NAME%"
+  Exempt: "&7Nem tudod figyelmeztettni: &c&o%NAME%"
   Layout:
   - '%PREFIX% &cKaptál Egy Figyelmeztettést'
   - "&cIndok &8» &7%REASON%"
@@ -120,7 +120,7 @@ Warn:
 Note:
   Usage: "&cHasználat &8» &7&o/note (-s) [Név] [Indok]"
   Done: "&c&o%NAME% &7sikeresen feljegyezték!"
-  Exempt: "&7Nem tudsz feljegyzést tenni rá &c&o%NAME%"
+  Exempt: "&7Nem tudsz feljegyzést tenni rá: &c&o%NAME%"
   Notification:
   - "&c&o%NAME% &7feljegyezést kapott &e&o%OPERATOR% által."
   - "&7Indok &o%REASON%"
@@ -142,7 +142,7 @@ Kick:
   Usage: "&cHasználat &8» &7&o/kick (-s) [Név] [Indok/@Layout]"
   Done: "&c&o%NAME% &7sikeresen kirúgva!"
   NotOnline: "&c&o%NAME% &7nincsen online!"
-  Exempt: "&7Nem rúghatód ki &c&o%NAME% őt"
+  Exempt: "&7Nem rúghatód ki: &c&o%NAME%"
   Layout:
   - '%PREFIX% &7Ki Lettél Eúgva'
   - '&7'
