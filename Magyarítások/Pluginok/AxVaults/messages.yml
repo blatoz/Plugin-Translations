@@ -25,7 +25,7 @@ guis:
       - ' '
       - '&#FF0000&l(!) &#FF0000Zárolt széf'
   item-picker:
-    title: '&0Item választó'
+    title: '&0Item Választó'
   vault:
     title: '&0Széf #%num%'
 
@@ -72,7 +72,7 @@ set:
   removed: '&#FF0000Eltávolítottad a széfed a blokkból!'
 
 save:
-  manual: '&#00FF00Manuálisan mentettem a széföket! &f%time%ms&#00FF00! &#DDDDDD(ez a parancs célja a tesztelésre és előfordulhat, hogy okoz szükségtelen lagot)'
+  manual: '&#00FF00Manuálisan mentettem a széfeket! &f%time%ms&#00FF00! &#DDDDDD(ez a parancs célja a tesztelésre és előfordulhat, hogy okoz szükségtelen lagot)'
 
 no-permission: '&#FF0000Nincs engedélyed ehhez a parancsra!'
 force-open: '&#00FF00A széf kiválasztót megnyitottam &f%player%&#55FF00!'
