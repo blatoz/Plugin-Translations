@@ -1,0 +1,302 @@
+version: 4.4
+#   _    _ _ _   _                 _                        _   _ _           _
+#  | |  | | | | (_)               | |           /\         | | (_) |         | |
+#  | |  | | | |_ _ _ __ ___   __ _| |_ ___     /  \   _ __ | |_ _| |__   ___ | |_
+#  | |  | | | __| | '_ ` _ \ / _` | __/ _ \   / /\ \ | '_ \| __| | '_ \ / _ \| __|
+#  | |__| | | |_| | | | | | | (_| | ||  __/  / ____ \| | | | |_| | |_) | (_) | |_
+#  \____/|_|\__|_|_| |_| |_|\__,_|\__\___| /_/    \_\_| |_|\__|_|_.__/ \___/ \__|
+#
+#For any question / problem please open a ticket on my discord server,
+#here is the link: https://discord.gg/vgsjmbXez3
+
+# (!) DEBUG MODE (!)
+#Setting it to true will allow me to help you better during the assistance however
+#it results in a spam of useless messages in the console :(
+debug: false
+
+# (!) ANTIBOT ADAPTING MODE (!)
+#This parameter adapts the antibot by modifying some parameters based on the performance of your server and on your playerbase
+detect-server-performance: true
+
+# (!) WARNING (!)
+# If set to true it will be able to calculate the time that the server takes to do all its operations!
+# This involves creating a thread that could burden low-powered servers!
+# It is recommended to use it only in dedicated servers or in vps with more than 8 cores!
+# Use it at your own risk!
+enable-latency-thread: false
+
+# (!) NOTIFICATION (!)
+#Enable bossbar notification on attack (only on 1.9+ clients)
+enable-bossbar-automatic-notification: true
+#Disable notifications after an attack?
+disable-notifications-after-attack: false
+
+# (!) DISABLE CONSOLE ATTACK MESSAGE (!)
+#
+#If set to true, when you receive an attack on your server the
+#console will not write any warning messages (referring only to UAB messages)
+disable-console-attack-message: false
+
+# (!) AUTO-PURGER (!)
+#By default all auto-purge checks are performed maximum once every 5 minutes according to the set conditions below
+auto-purger:
+  #in the current case, when the blacklist goes up 15k+ IPs and there is no attack it will be cleared
+  #in the second case (AFTER_ATTACK), after an attack if the blacklist contains 15k+ IPs will be cleared
+  blacklist:
+    type: LIMIT #AFTER_ATTACK
+    value: 15000 #amount of ip
+    enabled: true
+  #same as blacklist
+  whitelist:
+    type: LIMIT
+    value: 2500 #amount of ip
+    enabled: false
+  #It will delete logs older than 15 days
+  logs:
+    value: 15 #days
+    enabled: true
+
+# (!) ANTIBOT-MODE (!)
+#
+#The antibot mode is the mode that aims to blacklist as many IPs as possible in order to reduce the amount of bots,
+#arriving at the server (especially if you have the firewall service active)
+antibotmode:
+  #This parameter indicates how long the antibot mode must last at least; if at the end of the time the attack persists it will be activated again
+  keep: 15 #seconds
+  #This parameter indicates how many connections there must be to the server for the antibot mode to be activated, ignores players in the whitelist
+  trigger: 10
+  #This parameter indicates how long the slow antibot mode that is activated when a slow bot attack is detected should last
+  keep-slow: 25
+  #This parameter indicates whether when the antibot mode is activated it should kick players who entered 5 minutes earlier as they could be bots
+  disconnect: true
+
+# (!) PING-MODE (!)
+#
+#PING-MODE is a mode that is activated when a ping attack is detected (i.e. when there are many players updating the server list),
+#this can cause some slowdowns but has now already been fixed by bungeecord, velocity etc...
+#remains an alternative only on spigot but could lead to errors when trying to block the player's ping
+pingmode:
+  #This parameter indicates how long the mode must remain active, during this mode players will still be able to enter the server unless a bot attack is detected together with the ping attack in which case entry for players will also be blocked
+  keep: 10
+  #This parameter indicates how many pings there must be in a second to activate this mode, normally a server with many players has many pings per second if this mode is activated I often advise you to increase this parameter to 500/1000 as very large servers do not suffer of ping attacks
+  trigger: 100
+  #MotdKiller Protection
+  #This method allows you to not send the server image when pinging (false means that it does not send the server logo so it is activated),
+  #however on spigot via the API it can lead to errors in the console (which are not dangerous but just annoying).
+  #If you often receive attacks of this type and your server cannot handle them, you should know that this attack is very similar to a DDos.
+  #I recommend you use firewall protection (not that of the plugin but an external one that is not a plugin) or anti DDos.
+  send_info: false
+
+# (!) PACKETMODE (!)
+#
+#This mode deals with blocking the errors that the server produces when there is an attack of malformed packets (basically blocked by the server itself but which produce errors that can cause slowdowns or crashes)
+#During this mode, as in the others, the error filter will be activated and can be modified in the final part of the config
+packetmode:
+  #This parameter indicates how long the mode should run after it detects the attack
+  keep: 15
+  #This parameter indicates the minimum number of packets received in the last second to activate this mode
+  trigger: 15
+  #This parameter indicates whether to blacklist an IP that has sent a malformed packet
+  blacklist-invalid-protocol: true
+
+#This parameter indicates how long a player must be online on the server to be whitelisted and therefore able to enter during attacks
+playtime_for_whitelist: 10 #minutes
+
+#I suggest not touching this section
+taskmanager:
+  clearcache: 60 #seconds
+  auth: 300 #seconds
+  register: 120 #seconds
+  update: 15 #seconds
+
+# (!) CHECKS (!)
+#
+#In this section there are all the plugin checks that are editable
+checks:
+  #This check is responsible for blocking a player when he enters for the first time by asking him to log back into the server,
+  #in this way in the case of a bot attack the server will not suffer initial slowdowns due to the few bots that enter in the initial part
+  firstjoin:
+    #This parameter allows you to activate or deactivate this check
+    enabled: true
+  #This check checks how many names the bot tried to enter the server with, blocking IPs that change their names too many times, it works only during an attack
+  namechanger:
+    #How often information is deleted from memory (avoiding using too much memory for useless data)
+    time: 200 #seconds
+    #This parameter indicates how many names the IP must change to be blacklisted
+    limit: 3
+    #This parameter allows you to activate or deactivate this check
+    enabled: true
+  #This check allows you to blacklist bots that connect too often, in this case it will block all IPs that connect more than 35 times in 300 seconds
+  superjoin:
+    #This parameter indicates how long the bot must make connections
+    time: 300
+    #This parameter indicates how many connections there must be from the bot to be blocked
+    limit: 35
+    #This parameter allows you to activate or deactivate this check
+    enabled: true
+  #This check allows players not on the whitelist to enter during a bot attack
+  #Its operation is as follows, the player will be asked to ping or connect to the server x times and if this player does not make a
+  #mistake the process will be able to enter the server
+  auth:
+    #Clear cache time
+    time: 300
+    #This parameter indicates the ping interval that will be asked of a player on average
+    ping: 4-7
+    #This parameter indicates the interval of seconds that the player will be asked to enter the server
+    timer: 3-7
+    #This parameter indicates how much time the player has to enter the server when completing the check
+    between: 1300 #milliseconds
+    #Since this check is expensive and can cause slowdowns, it will only be activated when 90% (in this case) of the attack's IPs are blocked in order to check a few hundred players who will therefore be able to connect and play
+    percent: 90
+    #This parameter indicates the number of times a player must fail the check to be blacklisted
+    maxfails: 25
+    #This setting allows the player to view how many pings he has made to the server via the MOTD (spigot) or via a text next to the number of online players (bungeecord),
+    #this is therefore called PING INTERFACE and can be deactivated.
+    #It is also possible to modify the messages that will appear to the player in the messages.yml file
+    ping_interface: true
+  legalname:
+    #All nicknames with a length less than or equal to 16 and containing
+    #characters such as "_" and "." the point is supported for geyser players to enter the server
+    #If you use a different character such as a "," just substitute it at the point in the expression below!
+    name-regex: "[a-zA-Z0-9_.]*"
+    #This parameter allows you to activate or deactivate this check
+    enabled: true
+  invalidname:
+    #If a player who enters contains one of the following strings in his name he will be blocked!
+    invalid:
+      - "MCSTORM_IO" #No regex
+      - "MC_BOT_IO"
+      - "REGEX-BotName_[A-Za-z0-9]+" #REGEX SUPPORT (must start with REGEX-{enter here your regex like the example})
+    blacklist: true
+    #This parameter allows you to activate or deactivate this check
+    enabled: true
+  strange-register:
+    #The second string after the command will be taken as the password
+    listen:
+      - "/register"
+      - "/reg"
+      - "/l"
+      - "/login"
+    limit: 3 #if 3 players uses the same password will be blacklisted
+    blacklist: true
+    antibotmode: true
+    #This parameter allows you to activate or deactivate this check
+    enabled: true
+  #This check is very useful for detecting slow bot attacks, however it is not a guarantee and can cause false positives,
+  #in which case I recommend deactivating it if you receive too many blacklist reports for the reason: STRANGE_PLAYER_CONNECTION
+  connection-analyze:
+    #to change these parameters is suggested to ask on discord only if you are experiencing issues with them
+    chat-trigger: 20
+    name-trigger: 4
+    #This parameter indicates how many players with scores equal to the one assigned below must be there to trigger the check
+    blacklist-trigger: 3
+    #This parameter indicates the minimum classification that a player must have to be
+    #considered a bot, the classifications are below:
+    # [NOT_BOT, SUSPECT_ACTIVITY, BOT_SUSPECTED, ALMOST_BOT, BOT_CONFIRMED]
+    blacklist-from: ALMOST_BOT #this means that all connections with ALMOST_BOT or BOT_CONFIRMED will be tagged as bots
+    enabled: true
+  slowjoin:
+    #This check will check if a player sends a certain packet,
+    #which the bots do not send, to 5 bots that do not send it
+    #in 60 it will perform the various actions
+    #WARNING
+    #If you see any abnormal kicks on your server it is recommended to disable it!
+    packet:
+      time: 120 #seconds
+      #This parameter indicates how many players do not need to send the packet to activate slow antibot mode
+      trigger: 5
+      condition: 0 #ignored here
+      blacklist: false
+      kick: true
+      antibotmode: true
+      #This parameter allows you to activate or deactivate this check
+      enabled: true
+    #This check controls the number of accounts connected simultaneously to the server from the same IP, blocking them based on the conditions below
+    account:
+      time: 0 #ignored here
+      #How many accounts must be connected simultaneously from the same IP in order to blacklist them?
+      trigger: 4
+      condition: 0 #ignored here
+      blacklist: true
+      kick: true
+      antibotmode: true
+      #This parameter allows you to activate or deactivate this check
+      enabled: true
+
+######################################
+#               FIREWALL             #
+######################################
+#This is the firewall section, to work correctly it requires the IPSet and IPTables service,
+#otherwise the hook will not be activated.
+#It will only work if the start script has permissions to execute the commands, it may not
+#work on sites that offer minecraft servers as a pterodactyl panel (aternos, elixirnode, server.pro, etc ...)
+
+#Removing / changing one of these commands in case you don't know what
+#you are doing is highly discouraged and could cause lag problems.
+#
+#Positive points:
+#After about 2-5 minutes of attack the number of connections per second will be reduced by 90/95%
+#The time depends on the number of IPs to be blacklisted
+#
+#Negative points:
+#Slower on spigot!
+#There will be an increase of CPU usage during ip blacklisting (Especially on low-powered servers)
+firewall:
+  enabled: false
+  #Unique name of IPSet
+  ip-set-id: "uab_blacklist"
+  #The duration of the blacklist for each ip
+  timeout: 0 # seconds, 0 = cancels on server restart or on blacklist clear (with command)
+  #Also clear the firewall blacklist when the blacklist is reset by command?
+  reset-on-blacklist-clear: true
+  #Commands executed to load the hook
+  setup-commands:
+    - "sudo ipset create %set% hash:ip %options% %t%"
+    - "sudo iptables -N UltimateAntiBot"
+    - "sudo iptables -F UltimateAntiBot"
+    - "sudo iptables -A UltimateAntiBot -p tcp -m set --match-set %set% src -j DROP"
+    - "sudo iptables -A INPUT -p tcp -j UltimateAntiBot"
+  shutdown-commands:
+    - "sudo iptables -F UltimateAntiBot"
+    - "sudo iptables -D INPUT -p tcp -j UltimateAntiBot"
+    - "sudo iptables -X UltimateAntiBot"
+    - "sudo ipset destroy %set%"
+  #Command executed to blacklist an ip
+  blacklist-command: "sudo ipset add %set% %ip%"
+  un-blacklist-command:
+    - "sudo ipset del %set% %ip%"
+
+#######################################
+#                 VPN                 #
+#######################################
+
+#Another anti vpn check (free) provided by: https://ip-api.com/
+#Disable this check if you are using proxycheck.io
+ip-api:
+  enabled: false #disabled by default for user that don't know how to use it
+
+#This check allows you to verify your users during bot attacks!
+#The site offers a free plan that you can access by signing up which gives you access to 1k requests per day.
+#Each check will cost you 1 request and at the end of the daily requests you will have to wait for the next day,
+
+#provided by: https://proxycheck.io/
+proxycheck:
+  #if key is not valid proxycheck is disabled (without errors in console (unless you have active debugging!))
+  api-key: "enter-here-your-key"
+
+#######################################
+#              FILTER                 #
+#######################################
+
+#This is to hide messages when players are kicked by the antibot
+#usually it's best to keep it turned on to remove spam from the console but
+#you can turn it off in case you need to debug something or if you want to see these message.
+hide-spigot-disconnect-message: true
+
+#Custom Message filter only works during a bot/packet/ping attack
+attack-filter:
+  - "Another plugin has cancelled the connection for" #luckperms on spigot
+  - "The UUID the player is connecting with now is NOT Mojang-assigned" #luckperms on bungeecord
+
+#Custom message console filter (works 24h/7)
+persistent-filter: []
