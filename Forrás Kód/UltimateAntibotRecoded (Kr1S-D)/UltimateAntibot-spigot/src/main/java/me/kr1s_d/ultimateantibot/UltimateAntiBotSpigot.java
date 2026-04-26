@@ -84,13 +84,13 @@ public final class UltimateAntiBotSpigot extends JavaPlugin implements IAntiBotP
             PerformanceHelper.init(ServerType.SPIGOT);
             MessageManager.init(messages);
         } catch (Exception e) {
-            logHelper.error("[ERROR] Error during config.yml & messages.yml loading!");
+            logHelper.error("[ERROR] Hiba config.yml & messages.yml betöltése közben!");
             e.printStackTrace();
             throw e;
         }
         Version.init(this);
         new Metrics(this, 11777);
-        logHelper.info("&fLoading &cUltimateAntiBot...");
+        logHelper.info("&cUltimateAntiBot &fbetöltése...");
         this.firewallService = new FirewallService(this);
         VPNService = new VPNService(this);
         VPNService.load();
