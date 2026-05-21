@@ -32,7 +32,7 @@ restored-shulker:
   - ' '
   - ' &7- &#00FFFFDátum: &f%date%'
   - ' &7- &#00FFFFHely: &f%location%'
-  - ' &7- &#00FFFFÁtadva: &f%staff%'
+  - ' &7- &#00FFFFÁtadta: &f%staff%'
   - ' '
 
 guis:
